@@ -1,25 +1,7 @@
----
-title: Operator
-parent: Dasar-dasar praktis pemrograman C
-has_children: false
-nav_order: 6
----
-
 # Operator
-
-<details open markdown="block">
-<summary>
-Table of contents
-</summary>
-1. TOC
-{:toc}
-</details>
-
----
 Operator merupakan simbol yang digunakan untuk melakukan operasi matematika atau logika.
 
 ## Operator aritmatika
----
 Misalkan x = 50 dan y = 10.
 
 | Operator | Deskripsi | Contoh |
@@ -33,7 +15,6 @@ Misalkan x = 50 dan y = 10.
 | -- | pengurangan dengan nilai satu | x-- = 49 |
 
 ## Operator relasi (hubungan)
----
 dengan menggunakan nilai x dan y yang sama, maka:
 
 | Operator | Deskripsi | Contoh (x operator y) |
@@ -46,7 +27,6 @@ dengan menggunakan nilai x dan y yang sama, maka:
 | <= | cek lebih kecil dari atau sama dengan | False |
 
 ## Operator logika
----
 Telah diketahui sebelumnya nilai True = 1 dan nilai False = 0 untuk boolean. Maka jika x = True dan y = False, maka:
 
 | Operator | Deskripsi | Contoh |
@@ -56,7 +36,6 @@ Telah diketahui sebelumnya nilai True = 1 dan nilai False = 0 untuk boolean. Mak
 | ! | operator "bukan" (NOT), yang mana merubah nilai True menjadi False, begitupun sebaliknya | !(x && y) adalah True |
 
 ## Operator bitwise
----
 Operator yang beroperasi pada setiap bit dari sebuah nilai.
 
 | Operator | Deskripsi |
@@ -69,7 +48,6 @@ Operator yang beroperasi pada setiap bit dari sebuah nilai.
 | >> | operasi yang menggeser nilai bit ke kanan |
 
 ## Operator penugasan (assigment)
----
 Langsung saja ke tabel agar lebih paham
 
 | Operator | Contoh |
@@ -87,7 +65,6 @@ Langsung saja ke tabel agar lebih paham
 | \|= | x \|= y sama dengan x = x \| y |
 
 ## Operator lainnya
----
 Selain yang telah disebutkan sebelumnya. Ada beberapa operator yang penting untuk diketahui. Diantaranya:
 
 | Operator | Deskripsi | Contoh |
