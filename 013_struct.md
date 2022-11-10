@@ -1,21 +1,4 @@
----
-title: Struktur
-parent: Dasar-dasar praktis pemrograman C
-has_children: false
-nav_order: 13
----
-
 # Struktur (struct)
-
-<details open markdown="block">
-<summary>
-Table of contents
-</summary>
-1. TOC
-{:toc}
-</details>
-
----
 Struktur (struct) merupakan tipe data yang dapat mengumpulkan beberapa tipe data yang berbeda dalam satu tempat variabel. Misal terdapat variabel **pengguna** yang mempunyai variabel **nama**, **nomor_id**, **email**, **total_pengikut**, maka dalam C, dapat dituliskan sebagai berikut:
 
 ```c++
@@ -51,4 +34,4 @@ int main() {
 }
 ```
 
-[Live Demo](https://ide.geeksforgeeks.org/C3iZKSlWOp){: .btn .fs-5 .mb-4 .mb-md-0 }
+[<kbd> <br> Live Demo <br> </kbd>](https://ide.geeksforgeeks.org/C3iZKSlWOp)
