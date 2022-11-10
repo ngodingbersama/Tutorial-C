@@ -127,5 +127,4 @@ x = 9 kurang dari 10
 [<kbd> <br> Live Demo <br> </kbd>](https://ide.geeksforgeeks.org/lkbJeADeqA)
 
 ## Perulangan bersarang
----
 Semua konsep yang telah disebutkan sebelumnya dapat melakukan perulangan secara bersarang.
