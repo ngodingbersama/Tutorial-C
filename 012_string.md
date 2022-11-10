@@ -1,21 +1,4 @@
----
-title: String
-parent: Dasar-dasar praktis pemrograman C
-has_children: false
-nav_order: 12
----
-
 # String
-
-<details open markdown="block">
-<summary>
-Table of contents
-</summary>
-1. TOC
-{:toc}
-</details>
-
----
 String pada dasarnya ialah array karakter 1 dimensi yang diakhiri dengan karakter **null** `'\0'`. Sehingga, jika ingin menuliskan kata "hello", maka dalam bentuk array dituliskan sebagai berikut:
 
 ```c++
