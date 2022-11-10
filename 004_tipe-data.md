@@ -1,21 +1,4 @@
----
-title: Beberapa tipe data di bahasa C
-parent: Dasar-dasar praktis pemrograman C
-has_children: false
-nav_order: 4
----
-
 # Beberapa tipe data di bahasa C
-
-<details open markdown="block">
-<summary>
-Table of contents
-</summary>
-1. TOC
-{:toc}
-</details>
-
----
 Diambil dari referensi [ini](https://www.tutorialspoint.com/cprogramming/c_data_types.htm), tipe-tipe data pada bahasa C dapat diklasifikasikan dalam 4 kategori:
 1. **Tipe-tipe dasar**: tipe ini merupakan tipe aritmatika yang mana terbagi lagi menjadi dua, yaitu **integer** dan **floating-point**.
 2. **tipe enum**: tipe ini juga merupakan tipe aritmatika integer namun diwakilkan oleh nama-nama. Yang paling familiar dari tipe enum ini ada boolean, yaitu True untuk 1 dan False untuk 0.
@@ -23,7 +6,6 @@ Diambil dari referensi [ini](https://www.tutorialspoint.com/cprogramming/c_data_
 4. **tipe turunan**: tipe ini merupakan tipe yang diturunkan dari tipe-tipe sebelumnya, seperti pointer, array, struct, union, dan fungsi.
 
 ## Tipe integer
----
 Beberapa tipe-tipe integer yang tersedia pada bahasa C adalah sebagai berikut:
 
 | **Jenis tipe integer** | **Ukuran penyimpanan** | **Batasan nilai** |
@@ -41,7 +23,6 @@ Beberapa tipe-tipe integer yang tersedia pada bahasa C adalah sebagai berikut:
 Ukuran pasti dari setiap variabel pada komputer tertentu dapat dilihat dengan menggunakan operator `sizeof`.
 
 ## Tipe *floating-point*
----
 tipe *floating-point* digunakan pada bilangan desimal. Perbedaan dari setiap tipe ini ialah presisi (akurasi nilai) dan sejauh mana angka belakang desimal yang bisa disimpan di memori.
 
 | **Jenis** | **Ukuran penyimpanan** | **Batasan nilai** | **Presisi** |
@@ -51,7 +32,6 @@ tipe *floating-point* digunakan pada bilangan desimal. Perbedaan dari setiap tip
 | long double | 10 byte | 3.4E-4932 s.d. 1.1E+4932 | 19 angka desimal |
 
 ## Tipe void
----
 Tipe ini sangat berguna di beberapa situasi. Ada 3 kemungkinan tipe void ini digunakan dalam bahasa C:
 1. **sebagai tipe kembalian fungsi**: ini merupakan tipe fungsi yang tidak memiliki nilai kembalian apapun.
 2. **sebagai argumen pada fungsi**: ini berarti fungsi tersebut tidak menerima parameter apapun.
