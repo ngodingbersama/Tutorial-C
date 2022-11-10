@@ -1,27 +1,9 @@
----
-title: Pengambilan keputusan
-parent: Dasar-dasar praktis pemrograman C
-has_children: false
-nav_order: 7
----
-
 # Pengambilan keputusan
-
-<details open markdown="block">
-<summary>
-Table of contents
-</summary>
-1. TOC
-{:toc}
-</details>
-
----
 Pada bahasa C, pengambilan keputusan dapat dinilai dari nilai dari sebuah kondisi. Sebuah kondisi dianggap benar jika bernilai bukan nol atau bukan NULL, sedangkan dianggap salah jika nol atau NULL.
 
 Ada beberapa contoh kondisi dalam bahasa C, diantaranya:
 
 ## Penggunaan `if`
----
 sintaks yang digunakan ialah:
 
 ```c++
@@ -52,10 +34,9 @@ output:
 nilai x = 5 lebih besar dari 3
 ```
 
-[Live Demo](https://ide.geeksforgeeks.org/AvleolBbL7){: .btn .fs-5 .mb-4 .mb-md-0 }
+[<kbd> <br> Live Demo <br> </kbd>](https://ide.geeksforgeeks.org/AvleolBbL7)
 
 ## Penggunaan `if ... else ...`
----
 sintaks yang digunakan ialah:
 
 ```c++
@@ -91,10 +72,9 @@ output:
 nilai x = 2 kurang dari atau sama dengan dari 3
 ```
 
-[Live Demo](https://ide.geeksforgeeks.org/2aDGEpw2yp){: .btn .fs-5 .mb-4 .mb-md-0 }
+[<kbd> <br> Live Demo <br> </kbd>](https://ide.geeksforgeeks.org/2aDGEpw2yp)
 
 ## Penggunaan `switch`
----
 `switch` digunakan saat sebuah nilai ingin diujikan dalam beberapa kondisi. sintaks yang digunakan ialah:
 
 ```c++
@@ -138,10 +118,9 @@ nilai x sama dengan dua
 nilai x = 2
 ```
 
-[Live Demo](https://ide.geeksforgeeks.org/lVg1ZsJPMS){: .btn .fs-5 .mb-4 .mb-md-0 }
+[<kbd> <br> Live Demo <br> </kbd>](https://ide.geeksforgeeks.org/lVg1ZsJPMS)
 
 ## Kondisi bersarang (nested conditions)
----
 Kondisi bisa bercabang atau bersarang jika pada kasus tertentu dan mungkin saja hal ini sering dijumpai saat memecahkan suatu masalah. `if` maupun `switch` dapat dilakukan secara bersarang dalam bahasa C.
 
 ```c++
