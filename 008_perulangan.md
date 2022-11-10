@@ -1,25 +1,7 @@
----
-title: Perulangan
-parent: Dasar-dasar praktis pemrograman C
-has_children: false
-nav_order: 8
----
-
 # Perulangan
-
-<details open markdown="block">
-<summary>
-Table of contents
-</summary>
-1. TOC
-{:toc}
-</details>
-
----
 Jika sebuah pernyataan ingin dilakukan beberapa kali, bahasa C mempunyai fitur untuk melakukannya dengan perulangan (looping).
 
 ## Perulangan `while`
----
 Pernyataan tetap berulang, jika kondisi tetap dalam keadaan benar (TRUE). Sintaks yang digunakan ialah:
 
 ```c++
@@ -58,10 +40,9 @@ nilai x = 8 lebih kecil dari 10
 nilai x = 9 lebih kecil dari 10
 ```
 
-[Live Demo](https://ide.geeksforgeeks.org/VkecwGFjKG){: .btn .fs-5 .mb-4 .mb-md-0 }
+[<kbd> <br> Live Demo <br> </kbd>](https://ide.geeksforgeeks.org/VkecwGFjKG)
 
 ## Perulangan `for`
----
 Perulangan `for` dilakukan jika terdapat spesifikasi dalam melakukan perulangan.
 
 ```c++
@@ -102,10 +83,9 @@ nilai i = 8, nilai x = 10
 nilai i = 9, nilai x = 11
 ```
 
-[Live Demo](https://ide.geeksforgeeks.org/J64QWWkJWW){: .btn .fs-5 .mb-4 .mb-md-0 }
+[<kbd> <br> Live Demo <br> </kbd>](https://ide.geeksforgeeks.org/J64QWWkJWW)
 
 ## Perulangan `do ... while ...`
----
 Perulangan `do ... while ...` mirip seperti `while` namun kondisi ditempatkan di bagian bawah. Tujuannya agar program tersebut setidaknya dilakukan sekali sebelum pengecekan kondisi.
 
 ```c++
@@ -144,7 +124,7 @@ x = 8 kurang dari 10
 x = 9 kurang dari 10
 ```
 
-[Live Demo](https://ide.geeksforgeeks.org/lkbJeADeqA){: .btn .fs-5 .mb-4 .mb-md-0 }
+[<kbd> <br> Live Demo <br> </kbd>](https://ide.geeksforgeeks.org/lkbJeADeqA)
 
 ## Perulangan bersarang
 ---
