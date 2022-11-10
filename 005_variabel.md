@@ -1,25 +1,7 @@
----
-title: Variabel
-parent: Dasar-dasar praktis pemrograman C
-has_children: false
-nav_order: 5
----
-
 # Variabel
-
-<details open markdown="block">
-<summary>
-Table of contents
-</summary>
-1. TOC
-{:toc}
-</details>
-
----
 Variabel merupakan nama yang mewakili sebuah area penyimpanan sehingga area tersebut dapat dimanipulasi oleh program. Variabel harus memiliki tipe data tertentu sehingga komputer dapat menyesuaikan ukuran memori/penyimpanan yang sesuai serta dapat dipahami oleh manusia.
 
 ## Pendefinisian variabel di C
----
 variabel didefinisikan setelah menentukan tipe datanya. Satu tipe data dapat mendefinisikan satu atau lebih variabel yangi dipisahkan dengan tanda koma (`,`). Secara konkritnya seperti ini:
 
 ```c++
