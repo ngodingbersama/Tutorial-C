@@ -245,3 +245,73 @@ Nama: Jason Tiramisu
 Alamat: Jalan Kenangan
 
 ```
+
+## Contoh 4: Contoh fgetc()
+```c++
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *fp;
+    // menulis ke file baru
+    fp = fopen("coba.txt","r");
+    
+    if (fp == NULL) exit(1);
+    
+    char huruf; 
+    
+    // mendapatkan karakter pertama
+    huruf = fgetc(fp);
+    printf("huruf: %c\n", huruf);
+    
+    // mendapatkan karakter selanjutnya
+    huruf = fgetc(fp);
+    printf("huruf: %c\n", huruf);
+    
+    fclose(fp);
+
+    return 0;
+}
+```
+
+output:
+```bash
+huruf: I
+huruf: n
+```
+
+## Contoh 5: penggunaan fgets()
+```c++
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *fp;
+    // menulis ke file baru
+    fp = fopen("coba.txt","r");
+    
+    if (fp == NULL) exit(1);
+    
+    // hindari penggunaan `char *` untuk menyimpan string
+    char string[500];
+    
+    // mendapatkan string satu baris pertama
+    fgets(string, 500, fp);
+    printf("string: %s", string);
+    
+    // mendapatkan string satu baris selanjutnya
+    fgets(string, 500, fp);
+    printf("string: %s", string);
+    
+    fclose(fp);
+
+    return 0;
+}
+```
+output:
+```bash
+string: Informasi pegawai: A
+string: Nama: Jason Tiramisu
+```
