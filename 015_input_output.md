@@ -81,9 +81,40 @@ kata yang Anda masukkan adalah 'kurcaci hitam', adapun nilai adalah 11
 ```
 
 > **Warning**
+> 
 > Perlu diketahui bahwa, hindarkan penggunaan pointer string kosong `char *` pada `scanf()` karena pointer string kosong ditempatkan pada sebuah alamat acak yang bisa saja program kita akan mengalami `segmentation fault`. 
+> 
+> ```c++
+> char *kata1;
+> char *kata2;
+> ```
+> 
+> output:
+> ```bash
+> masukkan sebuah kata:kurcaci hitam
+> Segmentation fault
+> ```
+> walaupun terkadang jika salah satu tipe data string adalah pointer dan lainnya adalah array itu tidak terjadi `segmentation fault`, penggunaan ini perlu dihindari untuk menjaga kestabilan program kita.
 
+# Input dan Output pada File
+Sebuah file mewakili kumpulan _bytes_, terlepas apakah itu file teks ataupun file binary. 
 
 ## Membuka file
+Kita dapat menggunakan fungsi `fopen()` yang terdapat di header `stdio.h` untuk membuat file baru ataupun membuka file yang telah ada. Pemanggilan fungsi ini akan mengeluarkan tipe objek pointer `FILE *` yang mengandung informasi yang dibutuhkan untuk mengatur file tersebut. Prototipenya adalah:
+
+```c++
+FILE *fopen( const char * filename, const char * mode );
+```
+
+Dari protopite tersebut, terdapat beberapa parameter yaitu `filename` yang merupakan string literal yang berisi nama dari file tersebut, dan `mode` akses yaitu sebagai berikut:
+
+|Mode|Penjelasan|
+|---|---|
+|r|Membuka file teks yang tersedia dan hanya untuk tujuan dibaca. Jika file tidak ada, maka `FILE *` bernilai NULL.|
+|w|Membuka file teks untuk ditulis, jika tidak ada file tersebut maka file tersebut dibuat. Di sini, program akan menulis isi dari awal file, sehingga tulisan sebelumnya akan terhapus.|
+|a|Sama seperti mode 'w'. Perbedaannya, tulisan terbaru akan ditambahkan setelah tulisan sebelumnya, sehingga tulisan sebelumnya tidak terhapus.|
+|r+|Membuka file teks untuk dibaca dan ditulis. Jika file tidak ada, maka `FILE *` bernilai NULL.|
+|w+|Membuka file teks untuk dibaca dan ditulis. Jika file tidak ada, maka file akan dibuat. Jika ada, maka konten file tersebut akan terhapus jika ditulis.|
+|a+|Membuka file teks untuk dibaca dan ditulis. Jika file tidak ada, maka file akan dibuat. Jika ada, konten baru akan ditambahkan setelah konten sebelumnya.|
 
 ## Menutup file
