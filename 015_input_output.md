@@ -3,6 +3,10 @@ Ketika kita katakan Input, berarti kita memasukkan beberapa data ke sebuah progr
 Ketika kita katakan Output, berarti kita menampilkan beberapa data pada layar, printer, atau disimpan dalam file yang lain.
 
 ## scanf() dan printf()
+fungsi `int scanf(const char *format, ...)` terdiri dari bagian pertama `const char *format` dan bagian variabel yang akan menyimpan nilai pada scanf `, ...`. Perlu diperhatikan bahwa, variabel yang akan menyimpan sebuah nilai musti berupa pointer. pada variabel kata, kalimat, atau array, `char *` atau `char[1000]` sudah merupakan bentuk pointer. Adapun variabel yang menggunakan tipe data dasar seperti `int`, `float`, dan lainnya harus diubah ke bentuk pointer dengan cara menambahkan ampersand `&`.
+
+Adapun `int printf(const char *format, ...)`, variabel yang akan ditampilkan pada layar tidak perlu diubah dalam bentuk pointer.
+
 ```c++
 #include <stdio.h>
 
