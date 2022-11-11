@@ -357,3 +357,5 @@ hasil: Informasi pegawai:
 hasil: A Nama:
 hasil: Jason Tiramisu
 ```
+
+## Contoh 7: Penggunaan `r+`
