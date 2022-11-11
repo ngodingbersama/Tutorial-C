@@ -126,6 +126,69 @@ int fclose( FILE *fp );
 
 Fungsi `fclose()` akan mengeluarkan (mengembalikan) nilai nol apabila berhasil, dan mengembalikan nilai EOF apabila terdapat error (file tidak dapat ditutup karena masalah tertentu). Fungsi `fclose()` dan EOF sudah tersedia di folder `stdio.h`.
 
+## Contoh 1: Membuka file yang tidak ada
+```c++
+#include <stdio.h>
+#include <stdlib.h> // untuk mendapatkan fungsi exit
+
+int main()
+{
+    FILE *fp;
+    fp = fopen("coba.txt","r");
+    
+    if (fp == NULL) {
+        printf("file tidak ada");
+        exit(1);
+    }
+    
+    fclose(fp);
+
+    return 0;
+}
+```
+
+output:
+```bash
+file tidak ada
+
+...Program finished with exit code 1
+```
+
+## Contoh 2: Membuat file kosong dan membaca file yang sudah ada
+```c++
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *fp;
+    // membuat file kosong
+    fp = fopen("coba.txt","w");
+    fclose(fp);
+    
+    // membaca file
+    fp = fopen("coba.txt","r");
+    
+    if (fp == NULL) {
+        printf("file tidak ada");
+        exit(1);
+    } else {
+        printf("file ada");
+    }
+    
+    fclose(fp);
+
+    return 0;
+}
+```
+
+output:
+```bash
+file ada
+
+...Program finished with exit code 0
+```
+
 ## Menulis file
 
 ## Membaca file
