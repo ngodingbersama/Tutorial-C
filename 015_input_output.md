@@ -124,7 +124,7 @@ Setelah mengolah file dalam pointer `FILE *`, file tersebut perlu ditutup agar m
 int fclose( FILE *fp );
 ```
 
-Fungsi `fclose()` akan mengeluarkan (mengembalikan) nilai nol apabila berhasil, dan mengembalikan nilai EOF apabila terdapat error (file tidak dapat ditutup karena masalah tertentu). Fungsi `fclose()` dan EOF sudah tersedia di folder `stdio.h`.
+Fungsi `fclose()` akan mengeluarkan (mengembalikan) nilai nol apabila berhasil, dan mengembalikan nilai EOF apabila terdapat error (file tidak dapat ditutup karena masalah tertentu). Fungsi `fclose()` dan EOF sudah tersedia di folder `stdio.h`. EOF merupakan alias untuk bilangan integer -1.
 
 ## Contoh 1: Membuka file yang tidak ada
 ```c++
@@ -190,5 +190,58 @@ file ada
 ```
 
 ## Menulis file
+Dalam menulis karakter, kata, atau kalimat ke dalam file teks, C sudah mempersiapkan beberapa fungsi yang dibutuhkan. Beberapa diantaranya adalah:
+```c++
+int fputc( int c, FILE *fp ); // menulis satu karakter
+int fputs( const char *s, FILE *fp ); // menulis satu string
+int fprintf(FILE *fp,const char *format, ...); // menulis satu string dengan beberapa format untuk input variabel (mirip printf)
+```
 
 ## Membaca file
+Dalam membaca karakter, kata, atau kalimat dan menampilkannya ke terminal/layar atau ke variabel tertentu, C juga sudah mempersiapkan beberapa fungsi yang dibutuhkan. Beberapa diantaranya adalah:
+```c++
+int fgetc( FILE * fp ); // membaca satu karakter
+char *fgets( char *buf, int n, FILE *fp ); // membaca satu string dan menampilkan ke layar/terminal
+int fscanf(FILE *fp, const char *format, ...); // membaca satu string dan menyimpannya di variabel, titik berhenti adalah spasi (mirip scanf)
+```
+
+## Contoh 3: Contoh menulis file
+```c++
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *fp;
+    // menulis ke file baru
+    fp = fopen("coba.txt","w");
+    
+    if (fp == NULL) exit(1);
+    
+    char *nama = "Jason Tiramisu";
+    char *alamat = "Jalan Kenangan";
+    
+    // memanfaatkan fputs
+    fputs("Informasi pegawai: ", fp);
+    
+    // memanfaatkan fputc
+    fputc('A', fp);
+    fputc('\n', fp);
+    
+    // memanfaatkan fprintf
+    fprintf(fp, "Nama: %s\n", nama);
+    fprintf(fp, "Alamat: %s\n", alamat);
+    
+    fclose(fp);
+
+    return 0;
+}
+```
+
+isi `coba.txt`:
+```bash
+Informasi pegawai: A
+Nama: Jason Tiramisu
+Alamat: Jalan Kenangan
+
+```
