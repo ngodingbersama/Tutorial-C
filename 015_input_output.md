@@ -118,3 +118,14 @@ Dari protopite tersebut, terdapat beberapa parameter yaitu `filename` yang merup
 |a+|Membuka file teks untuk dibaca dan ditulis. Jika file tidak ada, maka file akan dibuat. Jika ada, konten baru akan ditambahkan setelah konten sebelumnya.|
 
 ## Menutup file
+Setelah mengolah file dalam pointer `FILE *`, file tersebut perlu ditutup agar memori yang terpakai dapat dibersihkan. Prototipe untuk menutup file adalah:
+
+```c++
+int fclose( FILE *fp );
+```
+
+Fungsi `fclose()` akan mengeluarkan (mengembalikan) nilai nol apabila berhasil, dan mengembalikan nilai EOF apabila terdapat error (file tidak dapat ditutup karena masalah tertentu). Fungsi `fclose()` dan EOF sudah tersedia di folder `stdio.h`.
+
+## Menulis file
+
+## Membaca file
