@@ -359,3 +359,76 @@ hasil: Jason Tiramisu
 ```
 
 ## Contoh 7: Penggunaan `r+`
+Terdapat file `coba.txt` yang berisi:
+```
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+```
+
+Maka pembacaan dan penulisan ke file tersebut dengan menggunakan mode `r+` mengikuti posisi terakhir pembacaan atau penulisan sebelumnya.
+```c++
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *fp;
+    // membaca file coba.txt
+    fp = fopen("coba.txt","r+");
+    
+    if (fp == NULL) exit(1);
+    
+    char string[500];
+    fgets(string, 500, fp);
+    printf("%s", string);
+    
+    fputs("input teks terbaru", fp);
+    
+    fclose(fp);
+
+    return 0;
+}
+```
+
+output di terminal:
+```bash
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+```
+
+dan isi file `coba.txt` menjadi:
+```bash
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaainput teks terbaru
+```
+
+Apabila menulis pertama kali dan membacanya kemudian, maka:
+```c++
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *fp;
+    // membaca file coba.txt
+    fp = fopen("coba.txt","r+");
+    
+    if (fp == NULL) exit(1);
+    
+    fputs("input teks terbaru", fp);
+    
+    char string[500];
+    fgets(string, 500, fp);
+    printf("%s", string);
+    
+    fclose(fp);
+
+    return 0;
+}
+```
+Yang terdapat di file `coba.txt`:
+```bash
+input teks terbaruaaaaaaaaaaaaaa
+```
+
+sedangkan yang ada di terminal adalah dari posisi terakhir penulisan di file hingga akhir:
+```bash
+aaaaaaaaaaaaaa
+```
