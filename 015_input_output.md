@@ -246,7 +246,7 @@ Alamat: Jalan Kenangan
 
 ```
 
-## Contoh 4: Contoh fgetc()
+## Contoh 4: Penggunaan fgetc()
 ```c++
 #include <stdio.h>
 #include <stdlib.h>
@@ -281,7 +281,7 @@ huruf: I
 huruf: n
 ```
 
-## Contoh 5: penggunaan fgets()
+## Contoh 5: Penggunaan fgets()
 ```c++
 #include <stdio.h>
 #include <stdlib.h>
@@ -314,4 +314,46 @@ output:
 ```bash
 string: Informasi pegawai: A
 string: Nama: Jason Tiramisu
+```
+
+## Contoh 6: Penggunaan fscanf()
+```c++
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *fp;
+    // menulis ke file baru
+    fp = fopen("coba.txt","r");
+    
+    if (fp == NULL) exit(1);
+    
+    // hindari penggunaan `char *` untuk menyimpan string
+    char string1[20];
+    char string2[20];
+    
+    // mendapatkan 2 kata pertama
+    fscanf(fp, "%s %s", string1, string2);
+    printf("hasil: %s %s\n", string1, string2);
+    
+    // mendapatkan 2 kata selanjutnya
+    fscanf(fp, "%s %s", string1, string2);
+    printf("hasil: %s %s\n", string1, string2);
+    
+    // mendapatkan 2 kata selanjutnya
+    fscanf(fp, "%s %s", string1, string2);
+    printf("hasil: %s %s\n", string1, string2);
+    
+    fclose(fp);
+
+    return 0;
+}
+```
+
+output:
+```bash
+hasil: Informasi pegawai:
+hasil: A Nama:
+hasil: Jason Tiramisu
 ```
